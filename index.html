@@ -30,6 +30,14 @@ body {background:#edf1f4;font-family:Arial,'Segoe UI',sans-serif;color:var(--ink
 button {border-radius:3px}.foot {border-top:1px solid var(--border)}
 @media(max-width:650px){.paper{padding:20px 17px}.institutional-header{grid-template-columns:64px minmax(0,1fr) 64px;gap:6px}.logo-wrap{height:60px;width:60px}.institutional-logo{max-width:60px;max-height:60px}.institution-name{font-size:12px}.institution-division{font-size:10px}.institution-label{font-size:9px}.hero h1{font-size:23px}}
 @media print{.paper{border-top:0;padding:0}.institutional-header{margin-bottom:18px}.institutional-logo{max-width:86px;max-height:86px}.hero{background:#fff!important;border:1px solid #bdcbd7;border-left:5px solid #003b70;break-inside:avoid}.institutional-header{break-inside:avoid}.logo-wrap{height:90px}}
+
+/* Íconos de las herramientas permitidas en las instrucciones */
+.instructions-with-icons {display:flex;align-items:center;gap:18px}
+.instructions-logos {display:flex;align-items:center;justify-content:center;gap:10px;flex:0 0 116px;border-right:1px solid var(--border);padding-right:16px}
+.instructions-logos img {width:46px;height:46px;object-fit:contain}
+.instructions-content {flex:1;min-width:0}
+@media(max-width:650px){.instructions-with-icons{gap:12px}.instructions-logos{flex-basis:82px;gap:6px;padding-right:10px}.instructions-logos img{width:33px;height:33px}}
+@media print{.instructions-with-icons{break-inside:avoid}.instructions-logos img{width:42px;height:42px}}
 </style>
 </head>
 <body>
@@ -42,7 +50,7 @@ button {border-radius:3px}.foot {border-top:1px solid var(--border)}
 </div><header class="hero"><h1>Examen práctico Semana II</h1><h2>Regresión Lineal Múltiple</h2></header>
 <div class="meta"><span><strong>Duración:</strong> 1 hora</span><span><strong>Valor:</strong> 30 puntos</span></div>
 <div class="ident"><label>Nombre:<input aria-label="Nombre" class="line-input" type="text"/></label><label>Fecha:<input aria-label="Fecha" class="line-input" type="text"/></label></div>
-<div class="note"><strong>Instrucciones:</strong> Utilice SPSS o Excel para realizar el análisis. No basta con copiar las tablas generadas por el software: cada resultado debe ser interpretado en el contexto del problema. Use un nivel de significancia de \(\alpha=0.05\).</div>
+<div class="note instructions-with-icons"><div class="instructions-logos"><img src="logo_excel.png" alt="Excel"/><img src="logo_spss.png" alt="SPSS"/></div><div class="instructions-content"><strong>Instrucciones:</strong> Utilice SPSS o Excel para realizar el análisis. No basta con copiar las tablas generadas por el software: cada resultado debe ser interpretado en el contexto del problema. Use un nivel de significancia de \(\alpha=0.05\).</div></div>
 <section><h2 class="section-title">Caso práctico - Contexto del problema</h2><div class="rule"></div>
 <p>En el sector energético, se denominan pozos de exploración aquellos que se perforan con el propósito de encontrar y producir petróleo o gas natural en una zona mejorada, identificar nuevas reservas en un yacimiento donde antes se encontró petróleo o gas natural, o extender el límite de una reserva ya conocida.</p>
 <p>Para este análisis se cuenta con una base de datos anual sobre pozos de exploración y variables económicas asociadas. Se desea estudiar qué factores pueden explicar el número de pozos de exploración perforados.</p>
