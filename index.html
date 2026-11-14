@@ -53,6 +53,16 @@ button {border-radius:3px}.foot {border-top:1px solid var(--border)}
 .help-text{font-size:12px;color:var(--muted);margin-top:8px}.sub-answer{margin-top:10px}.sub-answer .answer-panel{margin:10px 0 6px}.parts li{break-inside:avoid-page}
 @media(max-width:650px){.answer-panel{padding:12px}.answer-grid.cols-2{grid-template-columns:1fr}.eq-unit input{width:69px}}
 @media print{.answer-panel{background:#fff;break-inside:avoid}.field input,.field textarea,.field select,.eq-unit input{border-color:#a8b8c5}.option-pill{background:white!important}.answer-grid{gap:9px}}
+
+/* Aviso institucional de entregables: conserva legibilidad al imprimir. */
+.deliverables{background:#fffaf0;border:1px solid #e2ce9d;border-left:4px solid #b9882a;border-radius:3px;padding:13px 18px 13px 16px;margin:-6px 0 26px;color:#343b47}
+.deliverables-heading{display:flex;align-items:center;gap:10px;color:#74541a;font-size:14px;letter-spacing:.01em}
+.deliverable-icon{flex-shrink:0}
+.deliverables-list{margin:9px 0 0;padding-left:24px;font-size:14px;line-height:1.55}
+.deliverables-list li{padding-left:3px;margin:7px 0}
+.deliverables-list li::marker{color:#92661e;font-weight:750}
+@media(max-width:650px){.deliverables{padding:12px 14px}.deliverables-list{font-size:13px}}
+@media print{.deliverables{break-inside:avoid;background:#fffaf0!important;border-color:#c2aa75}}
 </style>
 </head>
 <body>
@@ -66,6 +76,13 @@ button {border-radius:3px}.foot {border-top:1px solid var(--border)}
 <div class="meta"><span><strong>Duración:</strong> 1 hora</span><span><strong>Valor:</strong> 30 puntos</span></div>
 <div class="ident"><label>Nombre:<input aria-label="Nombre" class="line-input" type="text"/></label><label>Fecha:<input aria-label="Fecha" class="line-input" type="text"/></label></div>
 <div class="note instructions-with-icons"><div class="instructions-logos"><img alt="Excel" src="logo_excel.png"/><img alt="SPSS" src="logo_spss.png"/></div><div class="instructions-content"><strong>Instrucciones:</strong> Utilice SPSS o Excel para realizar el análisis. No basta con copiar las tablas generadas por el software: cada resultado debe ser interpretado en el contexto del problema. Use un nivel de significancia de \(\alpha=0.05\).</div></div>
+<div class="deliverables" role="note" aria-label="Importante: documentos que debe entregar">
+  <div class="deliverables-heading"><svg class="deliverable-icon" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="Importante"><path d="M12 3.4 22 20.5H2L12 3.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v5.7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><circle cx="12" cy="18" r="1.1" fill="currentColor"/></svg><strong>Importante · Entregables del examen</strong></div>
+  <ol class="deliverables-list">
+    <li><strong>PDF del examen completado.</strong> Responda todas las preguntas en esta página y, al finalizar, haga clic en <strong>«Imprimir / Guardar PDF»</strong>. Seleccione <strong>«Guardar como PDF»</strong> como destino y adjunte el documento generado.</li>
+    <li><strong>Evidencia del análisis estadístico.</strong> Adjunte el <strong>PDF con los resultados de SPSS</strong> o el <strong>archivo de Excel utilizado</strong>, según la herramienta con la que haya realizado el examen.</li>
+  </ol>
+</div>
 <section><h2 class="section-title">Caso práctico - Contexto del problema</h2><div class="rule"></div>
 <p>En el sector energético, se denominan pozos de exploración aquellos que se perforan con el propósito de encontrar y producir petróleo o gas natural en una zona mejorada, identificar nuevas reservas en un yacimiento donde antes se encontró petróleo o gas natural, o extender el límite de una reserva ya conocida.</p>
 <p>Para este análisis se cuenta con una base de datos anual sobre pozos de exploración y variables económicas asociadas. Se desea estudiar qué factores pueden explicar el número de pozos de exploración perforados.</p>
